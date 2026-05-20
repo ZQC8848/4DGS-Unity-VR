@@ -1,0 +1,6 @@
+[submodule "4DGaussians"]
+	path = 4DGaussians
+	url = https://github.com/hustvl/4DGaussians.git
+[submodule "DynGsplat-unity"]
+	path = DynGsplat-unity
+	url = https://github.com/HiFi-Human/DynGsplat-unity.git
