@@ -1,0 +1,116 @@
+# =============================================================================
+# Unity
+# =============================================================================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+Recordings/
+[Aa]ssets/AssetStoreTools*
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+crashlytics-build.properties
+*.apk
+*.aab
+*.unitypackage
+*.app
+# Unity Addressables build output
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.json*
+[Aa]ssets/StreamingAssets/aa.meta
+[Aa]ssets/StreamingAssets/aa/*
+
+# =============================================================================
+# Python / Machine Learning
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+pip-wheel-metadata/
+.installed.cfg
+*.egg
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+ENV/
+# Jupyter
+.ipynb_checkpoints/
+# mypy / pyright
+.mypy_cache/
+.pyright/
+
+# =============================================================================
+# ML Training outputs & large data files
+# =============================================================================
+# PyTorch checkpoints
+*.pth
+*.pt
+*.ckpt
+# Point cloud files (large)
+*.ply
+# DynGsplat compressed data
+*.dgs
+*.dgsblk
+# Numpy / pickle
+*.npy
+*.npz
+*.pkl
+*.pickle
+# TensorBoard logs
+runs/
+tb_logs/
+wandb/
+# 4DGaussians specific outputs
+4DGaussians/output/
+4DGaussians/data/
+4DGS_TrainData/
+
+# =============================================================================
+# IDE / Editor
+# =============================================================================
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Claude Code workspace
+# =============================================================================
+.claude/
+
+# =============================================================================
+# Nested git repositories (tracked as-is, not submodules)
+# =============================================================================
+# Uncomment below to fully ignore external repos:
+# 4DGaussians/
+# DynGsplat-unity/
