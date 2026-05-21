@@ -106,7 +106,9 @@ Thumbs.db
 # =============================================================================
 # Claude Code workspace
 # =============================================================================
-.claude/
+.claude/settings.json
+.claude/settings.local.json
+.claude/todos.json
 
 # =============================================================================
 # Nested git repositories (tracked as-is, not submodules)
