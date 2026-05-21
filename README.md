@@ -323,6 +323,98 @@ icacls "C:\UnityProjects\GSplatTest\Packages\manifest.json" /grant "${env:USERNA
 
 ---
 
+## 子模块修改记录
+
+两个子模块（`4DGaussians`、`DynGsplat-unity`）指向上游仓库，无法直接推送改动。克隆本项目后需手动应用以下修改。
+
+### 4DGaussians 修改
+
+#### 1. CUDA 扩展编译修复（`submodules/depth-diff-gaussian-rasterization/setup.py` 和 `submodules/simple-knn/setup.py`）
+
+在 `extra_compile_args` 中添加兼容标志：
+
+```python
+# depth-diff-gaussian-rasterization/setup.py
+extra_compile_args={
+    "nvcc": [
+        "-I" + os.path.join(..., "third_party/glm/"),
+        "--allow-unsupported-compiler",
+        "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"
+    ],
+    "cxx": ["/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"]
+}
+
+# simple-knn/setup.py
+extra_compile_args={
+    "nvcc": ["--allow-unsupported-compiler", "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"],
+    "cxx": cxx_compiler_flags + ["/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"]
+}
+```
+
+#### 2. editable install 修复（`submodules/simple-knn/simple_knn/__init__.py`）
+
+创建空文件，否则 Windows 下 editable install 无法识别包：
+
+```powershell
+New-Item -ItemType File "4DGaussians\submodules\simple-knn\simple_knn\__init__.py"
+```
+
+#### 3. DyNeRF 训练 batch size（`arguments/dynerf/coffee_martini.py`）
+
+默认 `batch_size=4` 在 RTX 3070 Ti 上细训练需 17 小时，改为 1 后约 46 分钟：
+
+```python
+_base_ = './default.py'
+OptimizationParams = dict(
+    batch_size = 1,
+)
+```
+
+#### 4. 新增脚本：`scripts/extract_first_frames.py`
+
+从多相机 MP4 中提取第一帧供 COLMAP 标定：
+
+```python
+import cv2, os, glob, sys
+data_path  = sys.argv[1]
+output_dir = sys.argv[2]
+os.makedirs(output_dir, exist_ok=True)
+for i, vp in enumerate(sorted(glob.glob(os.path.join(data_path, "cam*.mp4")))):
+    cap = cv2.VideoCapture(vp)
+    ret, frame = cap.read(); cap.release()
+    if ret:
+        name = os.path.splitext(os.path.basename(vp))[0]
+        cv2.imwrite(os.path.join(output_dir, f"{name}.jpg"), frame)
+```
+
+#### 5. 修改脚本：`export_perframe_3DGS.py`，新增 `--max_frames` 参数
+
+支持均匀采样导出指定帧数（避免 300 帧 × 78 MB = 23 GB 的全量导出）：
+
+```python
+parser.add_argument("--max_frames", default=-1, type=int)
+# 在导出循环前加入：
+test_cameras = list(scene.getTestCameras())
+if args.max_frames > 0:
+    indices = np.linspace(0, len(test_cameras)-1, args.max_frames, dtype=int)
+    test_cameras = [test_cameras[i] for i in indices]
+```
+
+### DynGsplat-unity 修改
+
+#### `CompressScripts/weighted_distance/setup.py`
+
+同样需要 MSVC/CUDA 兼容标志：
+
+```python
+extra_compile_args={
+    "nvcc": ["--allow-unsupported-compiler", "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"],
+    "cxx": ["/D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"]
+}
+```
+
+---
+
 ## 参考项目
 
 - [4DGaussians](https://github.com/hustvl/4DGaussians) — Wu et al., CVPR 2024
