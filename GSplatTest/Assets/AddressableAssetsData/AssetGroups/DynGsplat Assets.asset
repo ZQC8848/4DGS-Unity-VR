@@ -15,13 +15,93 @@ MonoBehaviour:
   m_GroupName: DynGsplat Assets
   m_GUID: 719d685daa1cf724d8a6852e09f9852e
   m_SerializeEntries:
+  - m_GUID: 0e3856ed77fba19489ee153e179d1ef4
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block2.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18afd8740b339ef45907591a2225b236
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block13.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ad3d2b33e5ba5145898452841251adb
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block10.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bc329d5c7a43e84d9fb7b13971d0715
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block11.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3e9e309994b1f4d47a6b0b9018f5ae4d
     m_Address: Assets/DynGsplatData/lego/Data/Block0.dgsblk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51cb6b0a16114f64ba77f9fe88e92020
+    m_Address: Assets/DynGsplatData/coffee_martini/coffee_martini.dgs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59234107a95f74149bbd0702b3cee347
     m_Address: Assets/DynGsplatData/lego/lego.dgs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69ec801943552d9428743e84bc0219e4
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block12.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e0521a8f6c7047439f2fe1b547d6a9a
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block1.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97fc76177ed8cb140978d9549d316208
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block7.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ffc081357945cc4cbb143b91c8b4fee
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block0.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3f5ebe44ea0107438ef9a27d0b3bc4b
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block4.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: badde8a496860ed4a90ce2a8e07cf4b8
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block5.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4de6ff9c2737834a9d478551f4c2a1e
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block6.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c89dd20cb907e314d975e1eb1b074bb6
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block8.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df5d19c3931a28e4fa56d783748bb6ee
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block14.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5f1f05f02a9b1e41b11ef2b209cb828
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block9.dgsblk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8776ad7f98cff8419cfd204f6a8495f
+    m_Address: Assets/DynGsplatData/coffee_martini/Data/Block3.dgsblk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
